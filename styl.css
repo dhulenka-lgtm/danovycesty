@@ -81,3 +81,8 @@ article td,article th{border-bottom:1px solid var(--line);padding:9px 12px 9px 0
 
 footer{border-top:2px solid var(--ink);margin-top:60px;padding:22px 0}
 .foot-inner{max-width:var(--max);margin:0 auto;padding:0 20px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* fotky v clanku */
+article img{display:block;margin:32px auto;max-width:100%;height:auto;border-radius:2px}
+article figure{margin:32px 0}
+article figcaption{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);text-align:center;margin-top:10px;letter-spacing:.03em}
