@@ -86,3 +86,10 @@ footer{border-top:2px solid var(--ink);margin-top:60px;padding:22px 0}
 article img{display:block;margin:32px auto;max-width:100%;height:auto;border-radius:2px}
 article figure{margin:32px 0}
 article figcaption{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);text-align:center;margin-top:10px;letter-spacing:.03em}
+
+/* portret na strance O mne - maly, vpravo, text ho obteka */
+.r-o-mne article > p:has(img){float:right;width:190px;margin:6px 0 14px 30px}
+.r-o-mne article > p:has(img) img{display:block;width:100%!important;height:auto!important;margin:0;border-radius:2px}
+@media (max-width:640px){
+  .r-o-mne article > p:has(img){float:none;width:170px;margin:24px auto}
+}
