@@ -29,7 +29,7 @@ img{max-width:100%;height:auto}
 .masthead{border-bottom:2px solid var(--ink);background:var(--surface)}
 .mast-inner{max-width:var(--max);margin:0 auto;padding:24px 20px 16px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .wordmark{display:block;text-decoration:none;color:inherit;line-height:0}
-.wordmark .logo{display:block;height:clamp(64px,11vw,120px);width:auto}
+.wordmark .logo{display:block;height:clamp(52px,8vw,88px);width:auto}
 .wordmark .logo-tma{display:none}
 @media (prefers-color-scheme: dark){
   .wordmark .logo-svetlo{display:none}
