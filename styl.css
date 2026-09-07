@@ -99,3 +99,11 @@ article figcaption{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:
 @media (max-width:640px){
   .r-o-mne article > p:has(img){float:none;width:170px;margin:24px auto}
 }
+
+/* box "Poprve bez cestovky?" na hlavni strane */
+.zacatek{max-width:var(--text);margin:34px 0 44px;padding:22px 26px;background:var(--surface-2);border-left:4px solid var(--rail)}
+.zacatek h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;letter-spacing:.03em;margin:0 0 8px;line-height:1.1}
+.zacatek p{margin:0 0 14px;font-size:17px;line-height:1.6;color:var(--ink)}
+.zacatek a{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--rail);text-decoration:none;border-bottom:2px solid var(--rail);padding-bottom:2px}
+.zacatek a::before{content:"→ "}
+.zacatek a:hover{color:var(--ink);border-color:var(--ink)}
