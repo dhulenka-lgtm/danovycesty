@@ -107,3 +107,9 @@ article figcaption{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:
 .zacatek a{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--rail);text-decoration:none;border-bottom:2px solid var(--rail);padding-bottom:2px}
 .zacatek a::before{content:"→ "}
 .zacatek a:hover{color:var(--ink);border-color:var(--ink)}
+
+/* odkaz na rubriku pod clankem */
+.dalsi{max-width:var(--text);margin:44px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+.dalsi a{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--rail);text-decoration:none}
+.dalsi a::after{content:" →"}
+.dalsi a:hover{color:var(--ink)}
