@@ -21,6 +21,7 @@ body{
 h1,h2,h3,h4,.cond{font-family:"Barlow Condensed","Arial Narrow",Helvetica,sans-serif;font-weight:600;text-wrap:balance;letter-spacing:.01em;line-height:1.15}
 .mono{font-family:"IBM Plex Mono",ui-monospace,"Courier New",monospace}
 a{color:var(--blue)}
+strong,b{font-weight:600}
 a:hover{color:var(--rail)}
 :focus-visible{outline:2px solid var(--rail);outline-offset:3px}
 img{max-width:100%;height:auto}
@@ -44,30 +45,31 @@ nav a{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:16px;l
 nav a:hover{color:var(--ink)}
 nav a.on{color:var(--ink);border-bottom-color:var(--rail)}
 
-main{max-width:var(--max);margin:0 auto;padding:0 20px 90px}
+main{max-width:var(--max);margin:0 auto;padding:0 20px 112px}
 .uzky{max-width:var(--text)}
 .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--rail);margin:0 0 10px}
 .lede{font-size:20px;line-height:1.6;color:var(--muted);max-width:62ch}
-hr.rule{height:1px;background:var(--line);border:0;margin:44px 0}
+hr.rule{height:1px;background:var(--line);border:0;margin:68px 0}
 
 /* clanek */
 article h1{font-size:clamp(32px,5vw,48px);margin:0 0 12px}
-.meta-radek{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 30px}
+.meta-radek{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 38px}
 article p{max-width:66ch}
-article h2{font-size:28px;margin:44px 0 10px;padding-top:6px;border-top:1px solid var(--line)}
-article h3{font-size:22px;margin:32px 0 6px}
+article h2{font-size:28px;margin:66px 0 12px;padding-top:10px;border-top:1px solid var(--line)}
+article h3{font-size:22px;margin:42px 0 8px}
 article ul,article ol{max-width:66ch;padding-left:22px}
 article li{margin-bottom:10px}
 article blockquote{border-left:3px solid var(--rail);margin:24px 0;padding:2px 0 2px 20px;color:var(--muted)}
-article table{border-collapse:collapse;width:100%;font-size:16px}
+article table{border-collapse:collapse;width:100%;font-size:16px;font-variant-numeric:tabular-nums}
 article td,article th{border-bottom:1px solid var(--line);padding:9px 12px 9px 0;text-align:left;vertical-align:top}
 .tableWrap{overflow-x:auto}
 
 /* vypisy */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 @media(max-width:900px){.cards{grid-template-columns:1fr}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:22px;display:flex;flex-direction:column;gap:9px;text-decoration:none;color:inherit}
-.card:hover{border-color:var(--rail)}
+.card{background:var(--surface);border:0;border-radius:14px;padding:24px 26px;display:flex;flex-direction:column;gap:9px;text-decoration:none;color:inherit;transition:background .15s ease}
+.card:hover{background:var(--surface-2)}
+.card:hover h3{color:var(--rail)}
 .card .kicker{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .card h3{font-size:21px;margin:0}
 .card p{font-size:15.5px;color:var(--muted);margin:0;line-height:1.6}
@@ -80,7 +82,7 @@ article td,article th{border-bottom:1px solid var(--line);padding:9px 12px 9px 0
 .art .k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
 
 /* hero */
-.hero{padding:50px 0 40px;max-width:var(--text)}
+.hero{padding:64px 0 52px;max-width:var(--text)}
 .hero h1{font-size:clamp(34px,6vw,60px);line-height:1.05;margin:0 0 18px;text-transform:none;font-weight:700}
 .hero h1 em{font-style:normal;color:var(--rail)}
 .hero p{font-size:19px;color:var(--muted);line-height:1.62}
@@ -89,13 +91,13 @@ footer{border-top:2px solid var(--ink);margin-top:60px;padding:22px 0}
 .foot-inner{max-width:var(--max);margin:0 auto;padding:0 20px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 /* fotky v clanku */
-article img{display:block;margin:32px auto;max-width:100%;height:auto;border-radius:2px}
-article figure{margin:32px 0}
-article figcaption{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);text-align:center;margin-top:10px;letter-spacing:.03em}
+article img{display:block;margin:46px auto;max-width:100%;height:auto;border-radius:16px}
+article figure{margin:46px 0}
+article figcaption{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px;letter-spacing:.03em}
 
 /* portret na strance O mne - maly, vpravo, text ho obteka */
 .r-o-mne article > p:has(img){float:right;width:190px;margin:6px 0 14px 30px}
-.r-o-mne article > p:has(img) img{display:block;width:100%!important;height:auto!important;margin:0;border-radius:2px}
+.r-o-mne article > p:has(img) img{display:block;width:100%!important;height:auto!important;margin:0;border-radius:12px}
 @media (max-width:640px){
   .r-o-mne article > p:has(img){float:none;width:170px;margin:24px auto}
 }
@@ -108,8 +110,158 @@ article figcaption{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:
 .zacatek a::before{content:"→ "}
 .zacatek a:hover{color:var(--ink);border-color:var(--ink)}
 
+/* prilet loga pri otevreni titulky (titulka ma <body> bez tridy) */
+/* pohyb a velikost jedou jako dve samostatne vlastnosti; body drahy jsou rozlozene
+   podle ujete delky s profilem sin^2, takze rychlost nikde neposkoci */
+:root{--mx:calc(50vw - 210px); --my:calc(50vh - 72px); --zoom:2.5; --let:3.2s; --jvw:1vw; --jvh:1vh}
+@media (max-width:760px){:root{--mx:calc(50vw - 95px); --my:calc(50vh - 46px); --zoom:1.7; --jvw:.58vw; --jvh:.92vh}}
+@media (max-height:700px){:root{--zoom:2; --jvh:.84vh}}
+@media (max-height:560px){:root{--zoom:1.6; --jvh:.72vh}}
+
+body:not([class]) .wordmark .logo{
+  position:relative; z-index:60; transform-origin:center center;
+  will-change:translate, scale, opacity;
+  animation:
+    let-drahou   var(--let) linear both,
+    let-velikost var(--let) linear both,
+    let-nasvit   calc(var(--let) * .14) ease-out both;
+}
+
+@keyframes let-drahou{
+    0.00%{translate:calc(8.00 * var(--jvw)) calc(80.00 * var(--jvh)); animation-timing-function:linear}
+    1.44%{translate:calc(8.05 * var(--jvw)) calc(80.00 * var(--jvh)); animation-timing-function:linear}
+    2.88%{translate:calc(8.14 * var(--jvw)) calc(80.00 * var(--jvh)); animation-timing-function:linear}
+    4.31%{translate:calc(8.37 * var(--jvw)) calc(79.99 * var(--jvh)); animation-timing-function:linear}
+    5.75%{translate:calc(8.88 * var(--jvw)) calc(79.97 * var(--jvh)); animation-timing-function:linear}
+    7.19%{translate:calc(9.70 * var(--jvw)) calc(79.93 * var(--jvh)); animation-timing-function:linear}
+    8.62%{translate:calc(10.82 * var(--jvw)) calc(79.86 * var(--jvh)); animation-timing-function:linear}
+   10.06%{translate:calc(12.40 * var(--jvw)) calc(79.73 * var(--jvh)); animation-timing-function:linear}
+   11.50%{translate:calc(14.32 * var(--jvw)) calc(79.53 * var(--jvh)); animation-timing-function:linear}
+   12.94%{translate:calc(16.70 * var(--jvw)) calc(79.21 * var(--jvh)); animation-timing-function:linear}
+   14.38%{translate:calc(19.50 * var(--jvw)) calc(78.69 * var(--jvh)); animation-timing-function:linear}
+   15.81%{translate:calc(22.64 * var(--jvw) + var(--mx) * 0.0007) calc(77.93 * var(--jvh) + var(--my) * 0.0007); animation-timing-function:linear}
+   17.25%{translate:calc(26.14 * var(--jvw) + var(--mx) * 0.0016) calc(76.81 * var(--jvh) + var(--my) * 0.0016); animation-timing-function:linear}
+   18.69%{translate:calc(29.83 * var(--jvw) + var(--mx) * 0.0031) calc(75.22 * var(--jvh) + var(--my) * 0.0031); animation-timing-function:linear}
+   20.12%{translate:calc(33.63 * var(--jvw) + var(--mx) * 0.0061) calc(73.00 * var(--jvh) + var(--my) * 0.0061); animation-timing-function:linear}
+   21.56%{translate:calc(37.40 * var(--jvw) + var(--mx) * 0.0114) calc(69.92 * var(--jvh) + var(--my) * 0.0114); animation-timing-function:linear}
+   23.00%{translate:calc(40.83 * var(--jvw) + var(--mx) * 0.0209) calc(65.75 * var(--jvh) + var(--my) * 0.0209); animation-timing-function:linear}
+   24.44%{translate:calc(43.57 * var(--jvw) + var(--mx) * 0.0379) calc(60.11 * var(--jvh) + var(--my) * 0.0379); animation-timing-function:linear}
+   25.88%{translate:calc(44.99 * var(--jvw) + var(--mx) * 0.0679) calc(52.72 * var(--jvh) + var(--my) * 0.0679); animation-timing-function:linear}
+   27.31%{translate:calc(44.36 * var(--jvw) + var(--mx) * 0.1176) calc(43.74 * var(--jvh) + var(--my) * 0.1176); animation-timing-function:linear}
+   28.75%{translate:calc(41.31 * var(--jvw) + var(--mx) * 0.1919) calc(34.04 * var(--jvh) + var(--my) * 0.1919); animation-timing-function:linear}
+   30.19%{translate:calc(36.15 * var(--jvw) + var(--mx) * 0.2908) calc(24.73 * var(--jvh) + var(--my) * 0.2908); animation-timing-function:linear}
+   31.62%{translate:calc(29.53 * var(--jvw) + var(--mx) * 0.4114) calc(16.60 * var(--jvh) + var(--my) * 0.4114); animation-timing-function:linear}
+   33.06%{translate:calc(22.34 * var(--jvw) + var(--mx) * 0.5443) calc(10.23 * var(--jvh) + var(--my) * 0.5443); animation-timing-function:linear}
+   34.50%{translate:calc(15.72 * var(--jvw) + var(--mx) * 0.6716) calc(5.89 * var(--jvh) + var(--my) * 0.6716); animation-timing-function:linear}
+   35.94%{translate:calc(10.41 * var(--jvw) + var(--mx) * 0.7781) calc(3.26 * var(--jvh) + var(--my) * 0.7781); animation-timing-function:linear}
+   37.38%{translate:calc(6.50 * var(--jvw) + var(--mx) * 0.8594) calc(1.75 * var(--jvh) + var(--my) * 0.8594); animation-timing-function:linear}
+   38.81%{translate:calc(3.73 * var(--jvw) + var(--mx) * 0.9183) calc(0.89 * var(--jvh) + var(--my) * 0.9183); animation-timing-function:linear}
+   40.25%{translate:calc(1.91 * var(--jvw) + var(--mx) * 0.9579) calc(0.42 * var(--jvh) + var(--my) * 0.9579); animation-timing-function:linear}
+   41.69%{translate:calc(0.81 * var(--jvw) + var(--mx) * 0.9821) calc(0.17 * var(--jvh) + var(--my) * 0.9821); animation-timing-function:linear}
+   43.12%{translate:calc(0.24 * var(--jvw) + var(--mx) * 0.9948) calc(var(--my) * 0.9948); animation-timing-function:linear}
+   44.56%{translate:calc(var(--mx) * 1.0000) calc(var(--my) * 1.0000); animation-timing-function:linear}
+   46.00%{translate:var(--mx) var(--my); animation-timing-function:linear}
+   54.00%{translate:var(--mx) var(--my); animation-timing-function:linear}
+   56.09%{translate:calc(var(--mx) * 0.9994) calc(var(--my) * 0.9994); animation-timing-function:linear}
+   58.18%{translate:calc(var(--mx) * 0.9951) calc(var(--my) * 0.9951); animation-timing-function:linear}
+   60.27%{translate:calc(var(--mx) * 0.9839) calc(var(--my) * 0.9839); animation-timing-function:linear}
+   62.36%{translate:calc(var(--mx) * 0.9630) calc(var(--my) * 0.9630); animation-timing-function:linear}
+   64.45%{translate:calc(var(--mx) * 0.9303) calc(var(--my) * 0.9303); animation-timing-function:linear}
+   66.55%{translate:calc(var(--mx) * 0.8848) calc(var(--my) * 0.8848); animation-timing-function:linear}
+   68.64%{translate:calc(var(--mx) * 0.8266) calc(var(--my) * 0.8266); animation-timing-function:linear}
+   70.73%{translate:calc(var(--mx) * 0.7566) calc(var(--my) * 0.7566); animation-timing-function:linear}
+   72.82%{translate:calc(var(--mx) * 0.6770) calc(var(--my) * 0.6770); animation-timing-function:linear}
+   74.91%{translate:calc(var(--mx) * 0.5903) calc(var(--my) * 0.5903); animation-timing-function:linear}
+   77.00%{translate:calc(var(--mx) * 0.5000) calc(var(--my) * 0.5000); animation-timing-function:linear}
+   79.09%{translate:calc(var(--mx) * 0.4097) calc(var(--my) * 0.4097); animation-timing-function:linear}
+   81.18%{translate:calc(var(--mx) * 0.3230) calc(var(--my) * 0.3230); animation-timing-function:linear}
+   83.27%{translate:calc(var(--mx) * 0.2434) calc(var(--my) * 0.2434); animation-timing-function:linear}
+   85.36%{translate:calc(var(--mx) * 0.1734) calc(var(--my) * 0.1734); animation-timing-function:linear}
+   87.45%{translate:calc(var(--mx) * 0.1152) calc(var(--my) * 0.1152); animation-timing-function:linear}
+   89.55%{translate:calc(var(--mx) * 0.0697) calc(var(--my) * 0.0697); animation-timing-function:linear}
+   91.64%{translate:calc(var(--mx) * 0.0370) calc(var(--my) * 0.0370); animation-timing-function:linear}
+   93.73%{translate:calc(var(--mx) * 0.0161) calc(var(--my) * 0.0161); animation-timing-function:linear}
+   95.82%{translate:calc(var(--mx) * 0.0049) calc(var(--my) * 0.0049); animation-timing-function:linear}
+   97.91%{translate:calc(var(--mx) * 0.0006) calc(var(--my) * 0.0006); animation-timing-function:linear}
+  100.00%{translate:0px 0px}
+}
+
+@keyframes let-velikost{
+    0.00%{scale:calc(.35 + (var(--zoom) - .35) * 0.0000); animation-timing-function:linear}
+    1.44%{scale:calc(.35 + (var(--zoom) - .35) * 0.0002); animation-timing-function:linear}
+    2.88%{scale:calc(.35 + (var(--zoom) - .35) * 0.0016); animation-timing-function:linear}
+    4.31%{scale:calc(.35 + (var(--zoom) - .35) * 0.0053); animation-timing-function:linear}
+    5.75%{scale:calc(.35 + (var(--zoom) - .35) * 0.0125); animation-timing-function:linear}
+    7.19%{scale:calc(.35 + (var(--zoom) - .35) * 0.0239); animation-timing-function:linear}
+    8.62%{scale:calc(.35 + (var(--zoom) - .35) * 0.0405); animation-timing-function:linear}
+   10.06%{scale:calc(.35 + (var(--zoom) - .35) * 0.0627); animation-timing-function:linear}
+   11.50%{scale:calc(.35 + (var(--zoom) - .35) * 0.0908); animation-timing-function:linear}
+   12.94%{scale:calc(.35 + (var(--zoom) - .35) * 0.1252); animation-timing-function:linear}
+   14.38%{scale:calc(.35 + (var(--zoom) - .35) * 0.1655); animation-timing-function:linear}
+   15.81%{scale:calc(.35 + (var(--zoom) - .35) * 0.2114); animation-timing-function:linear}
+   17.25%{scale:calc(.35 + (var(--zoom) - .35) * 0.2625); animation-timing-function:linear}
+   18.69%{scale:calc(.35 + (var(--zoom) - .35) * 0.3178); animation-timing-function:linear}
+   20.12%{scale:calc(.35 + (var(--zoom) - .35) * 0.3766); animation-timing-function:linear}
+   21.56%{scale:calc(.35 + (var(--zoom) - .35) * 0.4377); animation-timing-function:linear}
+   23.00%{scale:calc(.35 + (var(--zoom) - .35) * 0.5000); animation-timing-function:linear}
+   24.44%{scale:calc(.35 + (var(--zoom) - .35) * 0.5623); animation-timing-function:linear}
+   25.88%{scale:calc(.35 + (var(--zoom) - .35) * 0.6234); animation-timing-function:linear}
+   27.31%{scale:calc(.35 + (var(--zoom) - .35) * 0.6822); animation-timing-function:linear}
+   28.75%{scale:calc(.35 + (var(--zoom) - .35) * 0.7375); animation-timing-function:linear}
+   30.19%{scale:calc(.35 + (var(--zoom) - .35) * 0.7886); animation-timing-function:linear}
+   31.62%{scale:calc(.35 + (var(--zoom) - .35) * 0.8345); animation-timing-function:linear}
+   33.06%{scale:calc(.35 + (var(--zoom) - .35) * 0.8748); animation-timing-function:linear}
+   34.50%{scale:calc(.35 + (var(--zoom) - .35) * 0.9092); animation-timing-function:linear}
+   35.94%{scale:calc(.35 + (var(--zoom) - .35) * 0.9373); animation-timing-function:linear}
+   37.38%{scale:calc(.35 + (var(--zoom) - .35) * 0.9595); animation-timing-function:linear}
+   38.81%{scale:calc(.35 + (var(--zoom) - .35) * 0.9761); animation-timing-function:linear}
+   40.25%{scale:calc(.35 + (var(--zoom) - .35) * 0.9875); animation-timing-function:linear}
+   41.69%{scale:calc(.35 + (var(--zoom) - .35) * 0.9947); animation-timing-function:linear}
+   43.12%{scale:calc(.35 + (var(--zoom) - .35) * 0.9984); animation-timing-function:linear}
+   44.56%{scale:calc(.35 + (var(--zoom) - .35) * 0.9998); animation-timing-function:linear}
+   46.00%{scale:calc(.35 + (var(--zoom) - .35) * 1.0000); animation-timing-function:linear}
+   54.00%{scale:calc(.35 + (var(--zoom) - .35) * 1.0000); animation-timing-function:linear}
+   56.09%{scale:calc(1 + (var(--zoom) - 1) * 0.9994); animation-timing-function:linear}
+   58.18%{scale:calc(1 + (var(--zoom) - 1) * 0.9951); animation-timing-function:linear}
+   60.27%{scale:calc(1 + (var(--zoom) - 1) * 0.9839); animation-timing-function:linear}
+   62.36%{scale:calc(1 + (var(--zoom) - 1) * 0.9630); animation-timing-function:linear}
+   64.45%{scale:calc(1 + (var(--zoom) - 1) * 0.9303); animation-timing-function:linear}
+   66.55%{scale:calc(1 + (var(--zoom) - 1) * 0.8848); animation-timing-function:linear}
+   68.64%{scale:calc(1 + (var(--zoom) - 1) * 0.8266); animation-timing-function:linear}
+   70.73%{scale:calc(1 + (var(--zoom) - 1) * 0.7566); animation-timing-function:linear}
+   72.82%{scale:calc(1 + (var(--zoom) - 1) * 0.6770); animation-timing-function:linear}
+   74.91%{scale:calc(1 + (var(--zoom) - 1) * 0.5903); animation-timing-function:linear}
+   77.00%{scale:calc(1 + (var(--zoom) - 1) * 0.5000); animation-timing-function:linear}
+   79.09%{scale:calc(1 + (var(--zoom) - 1) * 0.4097); animation-timing-function:linear}
+   81.18%{scale:calc(1 + (var(--zoom) - 1) * 0.3230); animation-timing-function:linear}
+   83.27%{scale:calc(1 + (var(--zoom) - 1) * 0.2434); animation-timing-function:linear}
+   85.36%{scale:calc(1 + (var(--zoom) - 1) * 0.1734); animation-timing-function:linear}
+   87.45%{scale:calc(1 + (var(--zoom) - 1) * 0.1152); animation-timing-function:linear}
+   89.55%{scale:calc(1 + (var(--zoom) - 1) * 0.0697); animation-timing-function:linear}
+   91.64%{scale:calc(1 + (var(--zoom) - 1) * 0.0370); animation-timing-function:linear}
+   93.73%{scale:calc(1 + (var(--zoom) - 1) * 0.0161); animation-timing-function:linear}
+   95.82%{scale:calc(1 + (var(--zoom) - 1) * 0.0049); animation-timing-function:linear}
+   97.91%{scale:calc(1 + (var(--zoom) - 1) * 0.0006); animation-timing-function:linear}
+  100.00%{scale:calc(.35 + (var(--zoom) - .35) * -0.0000)}
+}
+
+@keyframes let-nasvit{from{opacity:0}to{opacity:1}}
+
+/* zbytek stranky nabehne, az logo vyrazi ze stredu k hlavicce */
+body:not([class]) .tagline,
+body:not([class]) nav,
+body:not([class]) main{animation:nabehni .6s ease-out both; animation-delay:calc(var(--let) * .56)}
+@keyframes nabehni{from{opacity:0}to{opacity:1}}
+
+@media (prefers-reduced-motion: reduce){
+  body:not([class]) .wordmark .logo,
+  body:not([class]) .tagline,
+  body:not([class]) nav,
+  body:not([class]) main{animation:none}
+}
+
 /* odkaz na rubriku pod clankem */
-.dalsi{max-width:var(--text);margin:44px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+.dalsi{max-width:var(--text);margin:64px 0 0;padding-top:24px;border-top:1px solid var(--line)}
 .dalsi a{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--rail);text-decoration:none}
 .dalsi a::after{content:" →"}
 .dalsi a:hover{color:var(--ink)}
